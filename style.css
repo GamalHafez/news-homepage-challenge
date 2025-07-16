@@ -1,0 +1,259 @@
+/* page font */
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* page style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1225px;
+  margin: 80px auto;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* main header */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  color: hsl(236, 13%, 42%);
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.nav-list a:link,
+.nav-list a:visited {
+  color: hsl(236, 13%, 42%);
+}
+
+.nav-list a:hover,
+.nav-list a:active {
+  color: hsl(5, 85%, 63%);
+}
+
+/* page hero */
+.hero-article {
+  color: hsl(236, 13%, 42%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  row-gap: 35px;
+  column-gap: 50px;
+  align-items: start;
+}
+
+.hero-body {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.hero-text {
+  font-size: 17px;
+  line-height: 1.8;
+  grid-column: 1/-1;
+}
+
+.hero-img {
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.hero-title {
+  color: hsl(240, 100%, 5%);
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.hero-button {
+  color: hsl(233, 8%, 79%);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  border: none;
+  background-color: hsl(240, 100%, 5%);
+  padding: 15px 30px;
+}
+
+.hero-button:hover {
+  background-color: hsl(234, 12%, 30%);
+  cursor: pointer;
+}
+
+/* New side */
+.new-side {
+  background-color: hsl(240, 100%, 5%);
+  padding: 30px; /* check it again */
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+}
+
+.new-title {
+  color: hsl(35, 70%, 60%);
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.new-subtitle:link,
+.new-subtitle:visited {
+  color: hsl(36, 100%, 99%);
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.new-subtitle:hover,
+.new-description:active {
+  color: hsl(35, 70%, 60%);
+}
+
+.new-description {
+  color: hsl(233, 8%, 79%);
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid hsla(233, 8%, 79%, 0.264);
+}
+
+/* Trending-side */
+
+.trending-article {
+  display: flex;
+  gap: 20px;
+}
+
+.trending-article img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 1;
+}
+
+.trending-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  row-gap: 10px;
+}
+
+.article-number {
+  font-size: 35px;
+  font-weight: 700;
+  color: hsl(5, 85%, 63%);
+}
+
+.trending-link:link,
+.trending-link:visited {
+  font-size: 20px;
+  color: hsl(240, 100%, 5%);
+}
+
+.trending-link:hover,
+.trending-link:active {
+  color: hsl(5, 85%, 63%);
+}
+
+.trending-body {
+  color: hsl(236, 13%, 42%);
+  font-size: 17px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 3px solid hsl(240, 100%, 5%);
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  margin-left: 15px;
+}
+
+.page-resource:link,
+.page-resource:visited {
+  color: hsl(240, 100%, 5%);
+  font-weight: 700;
+}
+
+.page-resource:hover,
+.page-resource:active {
+  color: hsl(236, 13%, 42%);
+}
+
+/* page layout */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  column-gap: 50px;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+.popular-side {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+.new-side {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.trending-side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  grid-column: 1 / -1;
+}
+
+.footer {
+  grid-column: 1/-1;
+  grid-row: 5;
+}
